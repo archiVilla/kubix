@@ -1,0 +1,1168 @@
+<!DOCTYPE html><html class="dark" id="htmlRoot" lang="es" style=""><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg><head><title>Kubico · Propuesta de rediseño por Archilogic</title><meta name="robots" content="noindex,nofollow"><meta name="description" content="Preview de la propuesta de rediseño de Kubico por Archilogic. Pendiente de aprobación."><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;family=Syne:wght@400..800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><style>
+@layer base {
+  html, body { margin: 0; padding: 0; }
+  body { overscroll-behavior: none; }
+  main > :first-child { margin-top: 0 !important; }
+  main > :last-child { margin-bottom: 0 !important; }
+}
+::-webkit-scrollbar { display: none; }
+
+/* Dynamic Theme CSS Variables */
+:root {
+  /* Default Night / Dark Mode Variables */
+  --bg-main: #111317;
+  --bg-lowest: #0c0e12;
+  --bg-container: #1e2024;
+  --bg-container-low: #1a1c20;
+  --bg-container-high: #282a2e;
+  --bg-surface-charcoal: #16181D;
+  --bg-elevated: #1E222A;
+  --text-on-surface: #e2e2e8;
+  --text-on-surface-variant: #d1c6ab;
+  --text-heading: #F8F9FA;
+  --border-subtle: #262B35;
+  --border-metric: #333539;
+  --signal-yellow: #FFD100;
+  --signal-yellow-contrast: #16181D;
+  --accent-ochre-bg: rgba(125, 63, 20, 0.25);
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --blueprint-stroke: #262B35;
+  --map-frame-border: #333539;
+}
+
+/* Light Mode Variables (Blanco de Día / Arquitectónico Editorial) */
+html.light {
+  --bg-main: #f8f9fa;
+  --bg-lowest: #ffffff;
+  --bg-container: #ffffff;
+  --bg-container-low: #f1f3f5;
+  --bg-container-high: #e9ecef;
+  --bg-surface-charcoal: #ffffff;
+  --bg-elevated: #f4f6f8;
+  --text-on-surface: #1e2229;
+  --text-on-surface-variant: #4b5563;
+  --text-heading: #0c0e12;
+  --border-subtle: #e2e8f0;
+  --border-metric: #cbd5e1;
+  --signal-yellow: #f59e0b;
+  --signal-yellow-contrast: #0c0e12;
+  --accent-ochre-bg: rgba(245, 158, 11, 0.15);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --blueprint-stroke: #e2e8f0;
+  --map-frame-border: #cbd5e1;
+}
+
+/* Smooth Theme Transitions */
+html, body, section, header, footer, div, nav, button, input, select {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dynamic Classes bound to CSS variables */
+.theme-bg-main { background-color: var(--bg-main); }
+.theme-bg-lowest { background-color: var(--bg-lowest); }
+.theme-bg-container { background-color: var(--bg-container); }
+.theme-bg-container-low { background-color: var(--bg-container-low); }
+.theme-bg-container-high { background-color: var(--bg-container-high); }
+.theme-bg-charcoal { background-color: var(--bg-surface-charcoal); }
+.theme-bg-elevated { background-color: var(--bg-elevated); }
+.theme-text-surface { color: var(--text-on-surface); }
+.theme-text-variant { color: var(--text-on-surface-variant); }
+.theme-text-heading { color: var(--text-heading); }
+.theme-border-subtle { border-color: var(--border-subtle); }
+.theme-border-metric { border-color: var(--border-metric); }
+.theme-accent-ochre { background-color: var(--accent-ochre-bg); }
+.theme-shadow { box-shadow: var(--card-shadow); }
+
+/* Day mode crisp outlines for architectural cards */
+html.light .theme-border-subtle,
+html.light .theme-card-bordered {
+  border: 1px solid var(--border-subtle);
+}
+html.light .header-day-border {
+  border-bottom: 1px solid var(--border-subtle);
+}
+</style><link rel="stylesheet" href="preview.css"></head><body class="theme-bg-main font-body-md theme-text-surface antialiased"><aside id="reviewBar">ARCHILOGIC <span>· Propuesta de rediseño · Pendiente de aprobación</span><a href="#estimador-espacio">Explorar propuesta ↓</a></aside><header class="fixed top-0 left-0 right-0 z-50 theme-bg-charcoal/95 backdrop-blur-md header-day-border shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="w-full theme-bg-lowest px-4 sm:px-8 py-1.5 flex items-center justify-between font-label-mono-sm text-label-mono-sm tracking-wider uppercase overflow-x-auto whitespace-nowrap border-b theme-border-subtle"><div class="flex items-center gap-6"><div class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-signal-yellow animate-pulse"></span><span class="theme-text-variant">DATOS DE EJEMPLO // RECINTOS:</span></div><div class="flex items-center gap-3 theme-text-surface"><span class="text-signal-yellow font-bold">[EXPO GDL]</span><span class="">PABELLÓN 04 - MONTAJE T-48H</span><span class="theme-text-variant">•</span><span class="text-signal-yellow font-bold">[WTC CDMX]</span><span class="">STAND 210 - CALIBRACIÓN LUMÍNICA</span><span class="theme-text-variant">•</span><span class="text-signal-yellow font-bold">[CINTERMEX MTY]</span><span class="">DESMONTAJE LOGÍSTICO COMPLETO</span></div></div><div class="hidden lg:flex items-center gap-4 theme-text-variant pl-4"><span class="text-signal-yellow font-bold">COORD:</span><span class="">20°43'N 103°23'W (ZAPOPAN MX)</span><span class="text-signal-yellow font-label-mono-sm text-label-mono-sm font-bold">UTC-6</span></div></div><div class="h-20 w-full px-4 sm:px-8 lg:px-12 flex items-center justify-between gap-4"><div class="flex items-center gap-4 shrink-0"><img alt="Image from https://kubico.mx/images/logoColor.png" class="h-8 w-auto object-contain" src="assets/image-00.png"><div class="hidden sm:flex flex-col"><span class="font-headline-sm text-headline-sm uppercase theme-text-heading tracking-tight leading-none font-bold">KUBICO</span><span class="font-label-mono-sm text-label-mono-sm theme-text-variant tracking-widest uppercase mt-0.5">ARQUITECTURA TEMPORAL</span></div></div><nav id="desktopNav" class="hidden xl:flex items-center gap-6 font-label-mono-sm text-label-mono-sm tracking-wider" data-active-classes="bg-signal-yellow text-surface-charcoal font-bold"><a class="px-3 py-1.5 theme-text-variant hover:theme-bg-elevated hover:theme-text-heading transition-colors" data-path="servicios" href="#servicios-especializados">01. SERVICIOS</a><a class="px-3 py-1.5 theme-text-variant hover:theme-bg-elevated hover:theme-text-heading transition-colors" data-path="proyectos-stands" href="#portafolio-selecto">02. PROYECTOS / STANDS</a><a class="px-3 py-1.5 theme-text-variant hover:theme-bg-elevated hover:theme-text-heading transition-colors" data-path="metodologia-espacio" href="#metodologia-cota">03. METODOLOGÍA &amp; ESPACIO</a><a class="px-3 py-1.5 theme-text-variant hover:theme-bg-elevated hover:theme-text-heading transition-colors" data-path="calendario-expos" href="#calendario-activo">04. CALENDARIO EXPOS</a><a class="px-3 py-1.5 theme-text-variant hover:theme-bg-elevated hover:theme-text-heading transition-colors" data-path="nosotros" href="#contacto-taller">05. NOSOTROS</a></nav><div class="flex items-center gap-2 sm:gap-4 shrink-0"><button id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Abrir menú">☰</button><!-- THEME SWITCHER PILL (Auto / Día / Noche) --><div class="inline-flex items-center p-1 rounded bg-surface-container-low theme-bg-elevated border theme-border-subtle font-label-mono-sm text-label-mono-sm text-[11px] select-none" id="themeSwitchGroup" role="group"><button aria-label="Modo Automático del Sistema" class="theme-btn px-2 sm:px-2.5 py-1 rounded transition-colors flex items-center gap-1.5" data-theme-mode="auto" id="btnThemeAuto" title="Automático (Sistema / Día-Noche)"><span class="material-symbols-outlined text-[14px]">tune</span><span class="hidden md:inline font-bold">AUTO</span></button><button aria-label="Modo Día Blanco" class="theme-btn px-2 sm:px-2.5 py-1 rounded transition-colors flex items-center gap-1.5" data-theme-mode="light" id="btnThemeLight" title="Modo Día (Blanco)"><span class="material-symbols-outlined text-[14px]">light_mode</span><span class="hidden md:inline font-bold">DÍA</span></button><button aria-label="Modo Noche Negro" class="theme-btn px-2 sm:px-2.5 py-1 rounded transition-colors flex items-center gap-1.5" data-theme-mode="dark" id="btnThemeDark" title="Modo Noche (Negro)"><span class="material-symbols-outlined text-[14px]">dark_mode</span><span class="hidden md:inline font-bold">NOCHE</span></button></div><a class="relative inline-flex items-center justify-center bg-signal-yellow hover:bg-raw-white text-surface-charcoal font-label-mono-sm text-label-mono-sm px-3 sm:px-5 py-2 sm:py-2.5 uppercase font-bold tracking-wider transition-colors group shadow-sm" data-path="cotizar-espacio" href="#estimador-espacio"><span class="relative z-10 text-xs sm:text-label-mono-sm">COTIZAR ESPACIO</span><span class="material-symbols-outlined text-[16px] ml-1.5 group-hover:translate-x-0.5 transition-transform">arrow_forward</span></a></div></div><nav id="mobileNav" hidden aria-label="Navegación móvil"><a href="#servicios-especializados">Servicios</a><a href="#portafolio-selecto">Proyectos / Stands</a><a href="#metodologia-cota">Metodología &amp; espacio</a><a href="#calendario-activo">Calendario expos</a><a href="#contacto-taller">Nosotros / Contacto</a></nav></header><main class="w-full pt-20 theme-bg-main"><div class="flex flex-col w-full theme-text-surface">
+<!-- =========================================================================
+       HERO PRINCIPAL ARQUITECTÓNICO
+       ========================================================================= -->
+<section class="relative w-full overflow-hidden theme-bg-lowest px-4 sm:px-8 lg:px-12 py-16 lg:py-24 border-b theme-border-subtle">
+<!-- Blueprint Grid Underlay -->
+<div class="absolute inset-0 pointer-events-none opacity-20">
+<svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="60" id="archGrid" patternUnits="userSpaceOnUse" width="60">
+<path d="M 60 0 L 0 0 0 60" fill="none" stroke="currentColor" stroke-width="0.8" style="stroke: var(--blueprint-stroke);"></path>
+<circle cx="0" cy="0" fill="#FFD100" opacity="0.3" r="1.5"></circle>
+</pattern>
+</defs>
+<rect fill="url(#archGrid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<!-- Architectural Drafting Annotation Overlays -->
+<div class="relative z-10 max-w-7xl mx-auto flex flex-col gap-12">
+<!-- Section Technical Index Bar -->
+<div class="flex flex-wrap items-center justify-between gap-4 font-label-mono-sm text-label-mono-sm theme-text-variant">
+<div class="flex items-center gap-3">
+<span class="inline-block w-2 h-2 bg-signal-yellow animate-ping"></span>
+<span class="theme-text-heading font-bold">KUBICO // ESTUDIO TÉCNICO DE MONTAJE</span>
+<span class="opacity-50">|</span>
+<span class="text-signal-yellow font-bold">COTA ZERO: 0.00m</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="theme-bg-charcoal px-2.5 py-1 theme-text-heading border theme-border-subtle">SISTEMA MODULAR ACTIVO</span>
+<span class="theme-bg-charcoal px-2.5 py-1 text-signal-yellow font-bold border theme-border-subtle">OCTANORM + WOODCRAFT</span>
+<span class="hidden md:inline theme-text-variant">EXP_CODE: MX-GDL-2024</span>
+</div>
+</div>
+<!-- Monumental Headline & Spatial Pitch -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+  <div class="lg:col-span-8 flex flex-col gap-6">
+    <div class="inline-flex items-center gap-2 self-start theme-accent-ochre px-3 py-1 text-signal-yellow font-label-mono-sm text-label-mono-sm uppercase tracking-widest font-bold border theme-border-subtle">
+      <span class="material-symbols-outlined text-[14px]">architecture</span>
+      Ingeniería de Recintos &amp; Espacios Efímeros
+    </div>
+    <h1 class="font-display-lg text-[40px] leading-tight lg:text-display-lg lg:leading-[60px] uppercase theme-text-heading tracking-tight font-extrabold m-0">
+      ARQUITECTURA TEMPORAL QUE CONVIERTE ESPACIOS EN
+      <span class="inline-block text-signal-yellow underline decoration-signal-yellow/40 decoration-wavy decoration-2">CONEXIONES</span>
+      DE MARCA MEMORABLES.
+    </h1>
+  </div>
+  <div class="lg:col-span-4 flex flex-col gap-5 theme-bg-charcoal p-6 lg:p-7 theme-shadow border theme-border-subtle">
+    <div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm text-signal-yellow font-bold pb-2 border-b theme-border-subtle">
+      <span class="">MEMORIA DESCRIPTIVA</span>
+      <span class="">+13 AÑOS EXP</span>
+    </div>
+    <p class="font-body-md text-body-md theme-text-variant leading-relaxed m-0">
+      Transformamos recintos feriales y metros cuadrados vacíos en zonas vivas de intercambio comercial de alto impacto. Más de trece años proyectando, construyendo e iluminando stands excepcionales en Expo Guadalajara, WTC CDMX y los recintos líderes de México.
+    </p>
+    <div class="flex flex-col gap-2 font-label-mono-sm text-label-mono-sm theme-text-surface pt-2">
+      <div class="flex items-center justify-between py-1.5 theme-bg-container-low px-3 border theme-border-subtle">
+        <span class="theme-text-variant">TALLER CENTRAL:</span>
+        <span class="theme-text-heading font-bold">Zapopan, Jalisco</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 theme-bg-container-low px-3 border theme-border-subtle">
+        <span class="theme-text-variant">PRECISIÓN DE ENTREGA:</span>
+        <span class="text-signal-yellow font-bold">24H PREVIO A CORTE</span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Hero Visual Blueprint Panel + Action Cluster -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-4">
+<!-- Visual Presentation Card -->
+<div class="lg:col-span-8 relative group overflow-hidden theme-bg-charcoal theme-shadow border theme-border-subtle">
+<div class="relative h-[380px] sm:h-[480px] w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern monumental custom architecture trade show booth in a dark exhibition hall. High-end timber finishes, yellow architectural safety lighting strips, matte graphite surfaces, precision fabricated display counters, ambient warm LEDs, visitors interacting in a luxury contemporary exhibition pavilion." src="assets/image-01.jpg">
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
+<!-- Blueprint Coordinates Callout Box Overlay -->
+<div class="absolute top-6 left-6 theme-bg-lowest/95 backdrop-blur-md p-4 max-w-xs shadow-lg hidden sm:block border theme-border-subtle">
+<div class="font-label-mono-sm text-label-mono-sm text-signal-yellow font-bold flex items-center gap-2">
+<span class="w-2 h-2 bg-signal-yellow"></span>FICHA: STAND ISLA 120 M²
+              </div>
+<p class="font-body-sm text-body-sm theme-text-variant mt-1">
+                Estructura híbrida de pino tratado con nervaduras en acero al carbón y velarias lumínicas tensadas.
+              </p>
+<div class="mt-2 theme-text-heading font-label-mono-sm text-label-mono-sm font-bold">
+                ALTURA DE COTA: +5.50M
+              </div>
+</div>
+<!-- Badges Floating Bottom Right -->
+<div class="absolute bottom-6 right-6 flex flex-wrap gap-2">
+<span class="theme-bg-charcoal/90 text-signal-yellow font-label-mono-sm text-label-mono-sm px-3 py-1 font-bold border theme-border-subtle">CUSTOM CRAFT</span>
+<span class="theme-bg-charcoal/90 theme-text-heading font-label-mono-sm text-label-mono-sm px-3 py-1 border theme-border-subtle">OCTANORM SISTEMA</span>
+<span class="bg-signal-yellow text-surface-charcoal font-label-mono-sm text-label-mono-sm px-3 py-1 font-bold">MONTAJE CERTIFICADO</span>
+</div>
+</div>
+</div>
+<!-- Call to Actions & Direct Planner Panel -->
+<div class="lg:col-span-4 flex flex-col justify-between h-full gap-6">
+<div class="theme-bg-container p-6 flex flex-col gap-4 border theme-border-subtle theme-shadow">
+<span class="font-label-mono-lg text-label-mono-lg uppercase text-signal-yellow tracking-wider font-bold">COTIZACIÓN RÁPIDA</span>
+<h2 class="font-headline-md text-headline-md theme-text-heading uppercase font-bold">
+              ¿TIENES STAND ASIGNADO EN PRÓXIMA EXPO?
+            </h2>
+<p class="font-body-md text-body-md theme-text-variant">
+              Revisamos tu plano de pabellón y generamos propuesta conceptual en 3D respetando el reglamento del recinto ferial.
+            </p>
+<div class="flex flex-col gap-3 pt-2">
+<a class="w-full inline-flex items-center justify-center bg-signal-yellow hover:bg-raw-white text-surface-charcoal font-label-mono-lg text-label-mono-lg px-6 py-4 uppercase font-bold tracking-wider transition-all duration-200 shadow-md group" href="#estimador-espacio">
+<span class="">CONFIGURAR MI STAND</span>
+<span class="material-symbols-outlined ml-2 text-[20px] group-hover:translate-x-1 transition-transform">straighten</span>
+</a>
+<a class="w-full inline-flex items-center justify-center theme-bg-container-high hover:theme-bg-elevated theme-text-heading font-label-mono-lg text-label-mono-lg px-6 py-4 uppercase font-bold tracking-wider transition-colors border theme-border-subtle" href="#portafolio-selecto">
+<span class="">EXPLORAR PORTAFOLIO</span>
+<span class="material-symbols-outlined ml-2 text-[20px]">arrow_downward</span>
+</a>
+</div>
+</div>
+<!-- Quick Contact Pill -->
+<div class="theme-bg-charcoal p-4 flex items-center justify-between font-label-mono-sm text-label-mono-sm border theme-border-subtle">
+<div class="flex items-center gap-2 theme-text-variant">
+<span class="material-symbols-outlined text-signal-yellow text-[18px]">call</span>
+<span class="">LÍNEA DIRECTA:</span>
+</div>
+<a class="text-signal-yellow font-bold hover:underline" href="tel:+523312040801">(33) 1204 0801 / 02</a>
+</div>
+</div>
+</div>
+<!-- Ticker Estadístico en Vivo -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
+<div class="theme-bg-container p-6 flex flex-col gap-1 border theme-border-subtle">
+<span class="font-mono-metric text-mono-metric text-signal-yellow">+13</span>
+<span class="font-label-mono-sm text-label-mono-sm theme-text-variant uppercase tracking-wider font-bold">AÑOS DE TRAYECTORIA</span>
+<span class="font-body-sm text-body-sm theme-text-surface">Especialistas en montaje efímero</span>
+</div>
+<div class="theme-bg-container p-6 flex flex-col gap-1 border theme-border-subtle">
+<span class="font-mono-metric text-mono-metric theme-text-heading">+650</span>
+<span class="font-label-mono-sm text-label-mono-sm theme-text-variant uppercase tracking-wider font-bold">STANDS FABRICADOS</span>
+<span class="font-body-sm text-body-sm theme-text-surface">Maderas finas, metal y modulares</span>
+</div>
+<div class="theme-bg-container p-6 flex flex-col gap-1 border theme-border-subtle">
+<span class="font-mono-metric text-mono-metric text-signal-yellow">99.8%</span>
+<span class="font-label-mono-sm text-label-mono-sm theme-text-variant uppercase tracking-wider font-bold">ENTREGA PUNTUAL</span>
+<span class="font-body-sm text-body-sm theme-text-surface">Previo al corte de listón oficial</span>
+</div>
+<div class="theme-bg-container p-6 flex flex-col gap-1 border theme-border-subtle">
+<span class="font-mono-metric text-mono-metric theme-text-heading">EXPO GDL</span>
+<span class="font-label-mono-sm text-label-mono-sm theme-text-variant uppercase tracking-wider font-bold">SEDE PRINCIPAL</span>
+<span class="font-body-sm text-body-sm theme-text-surface">Cobertura CDMX, MTY y Bajío</span>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       SERVICIOS ESPECIALIZADOS // ARCHITECTURAL PROJECT GRIDS
+       ========================================================================= -->
+<section class="w-full theme-bg-main px-4 sm:px-8 lg:px-12 py-20 lg:py-28" id="servicios-especializados">
+<div class="max-w-7xl mx-auto flex flex-col gap-16">
+<!-- Section Header with Technical Metric Labels -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b theme-border-subtle">
+<div>
+<div class="font-label-mono-sm text-label-mono-sm text-signal-yellow uppercase tracking-widest flex items-center gap-2 font-bold">
+<span class="w-1.5 h-1.5 bg-signal-yellow"></span>CATÁLOGO DE DISCIPLINAS // CUADRANTE TÉCNICO
+          </div>
+<h2 class="font-display-lg text-display-lg uppercase theme-text-heading font-bold mt-2">
+            DISCIPLINAS DE ARQUITECTURA TEMPORAL
+          </h2>
+</div>
+<p class="font-body-md text-body-md theme-text-variant max-w-md">
+          Diseñamos interiores inteligentes que van acorde a la identidad corporativa y objetivos comerciales con taller propio de carpintería y herrería.
+        </p>
+</div>
+<!-- Grid de 4 Servicios con Formato de Cédula Arquitectónica -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Servicio 01: Stands Custom -->
+<div class="theme-bg-container flex flex-col justify-between p-6 hover:theme-bg-elevated transition-colors duration-300 group theme-shadow border theme-border-subtle">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-signal-yellow font-bold">DISC // 01</span>
+<span class="theme-accent-ochre text-signal-yellow px-2 py-0.5 font-bold border theme-border-subtle">MADERA &amp; ACERO</span>
+</div>
+<div class="h-44 w-full overflow-hidden theme-bg-charcoal mt-2 border theme-border-subtle">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Custom wooden stand architecture trade show exhibit with integrated hidden LED strips, multi-level private meeting lounge, bespoke carpentry and corporate branding in high end finish." src="assets/image-02.jpg">
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase theme-text-heading mt-2 group-hover:text-signal-yellow transition-colors font-bold">
+              STANDS CUSTOM
+            </h3>
+<p class="font-body-sm text-body-sm theme-text-variant leading-relaxed">
+              Arquitectura a la medida, maderas finas, herrería pesada, volumetrías monumentales con rigging aéreo, plafones suspendidos y branding 360°.
+            </p>
+</div>
+<div class="pt-6 mt-6 theme-bg-container-low -mx-6 -mb-6 p-6 flex flex-col gap-2 border-t theme-border-subtle">
+<div class="font-label-mono-sm text-label-mono-sm theme-text-surface flex justify-between">
+<span class="">ESCALA:</span><span class="text-signal-yellow font-bold">36m² a 600m²</span>
+</div>
+<div class="font-label-mono-sm text-label-mono-sm theme-text-surface flex justify-between">
+<span class="">ACABADOS:</span><span class="font-bold">MDF laqueado, texturas 3D</span>
+</div>
+</div>
+</div>
+<!-- Servicio 02: Stands Octanorm -->
+<div class="theme-bg-container flex flex-col justify-between p-6 hover:theme-bg-elevated transition-colors duration-300 group theme-shadow border theme-border-subtle">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-signal-yellow font-bold">DISC // 02</span>
+<span class="theme-bg-charcoal theme-text-heading px-2 py-0.5 font-bold border theme-border-subtle">MODULAR RÁPIDO</span>
+</div>
+<div class="h-44 w-full overflow-hidden theme-bg-charcoal mt-2 border theme-border-subtle">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Octanorm and Maxima aluminum modular exhibition booth with high tension fabric silicone edge graphics, minimalist lighting trusses, clean corporate reception counters, clean industrial finish." src="assets/image-03.jpg">
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase theme-text-heading mt-2 group-hover:text-signal-yellow transition-colors font-bold">
+              STANDS OCTANORM
+            </h3>
+<p class="font-body-sm text-body-sm theme-text-variant leading-relaxed">
+              Sistemas modulares de perfiles de aluminio y tela tensada sublimada de gran formato. Optimización de tiempo en montaje exprés y eficiencia presupuestal.
+            </p>
+</div>
+<div class="pt-6 mt-6 theme-bg-container-low -mx-6 -mb-6 p-6 flex flex-col gap-2 border-t theme-border-subtle">
+<div class="font-label-mono-sm text-label-mono-sm theme-text-surface flex justify-between">
+<span class="">ESCALA:</span><span class="text-signal-yellow font-bold">9m² a 150m²</span>
+</div>
+<div class="font-label-mono-sm text-label-mono-sm theme-text-surface flex justify-between">
+<span class="">MONTAJE:</span><span class="font-bold">Entrega en &lt; 12 Horas</span>
+</div>
+</div>
+</div>
+<!-- Servicio 03: Escenografías y Ambientaciones -->
+<div class="theme-bg-container flex flex-col justify-between p-6 hover:theme-bg-elevated transition-colors duration-300 group theme-shadow border theme-border-subtle">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-signal-yellow font-bold">DISC // 03</span>
+<span class="theme-accent-ochre text-signal-yellow px-2 py-0.5 font-bold border theme-border-subtle">ESCÉNICO &amp; AUDITORIO</span>
+</div>
+<div class="h-44 w-full overflow-hidden theme-bg-charcoal mt-2 border theme-border-subtle">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Grand keynote convention stage design with monumental curved geometric backdrop, LED video walls, dark architectural lighting, podium for corporate speakers and congress production." src="assets/image-04.jpg">
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase theme-text-heading mt-2 group-hover:text-signal-yellow transition-colors font-bold">
+              ESCENOGRAFÍAS
+            </h3>
+<p class="font-body-sm text-body-sm theme-text-variant leading-relaxed">
+              Diseño integral de plenarios, salas magistrales de congresos, pasarelas, lanzamientos de marca e intervenciones sensoriales con cálculo acústico y lumínico.
+            </p>
+</div>
+<div class="pt-6 mt-6 theme-bg-container-low -mx-6 -mb-6 p-6 flex flex-col gap-2 border-t theme-border-subtle">
+<div class="font-label-mono-sm text-label-mono-sm theme-text-surface flex justify-between">
+<span class="">AFORO:</span><span class="text-signal-yellow font-bold">100 a 4,500 personas</span>
+</div>
+<div class="font-label-mono-sm text-label-mono-sm theme-text-surface flex justify-between">
+<span class="">INTEGRACIÓN:</span><span class="font-bold">Audio / Video / DMX</span>
+</div>
+</div>
+</div>
+<!-- Servicio 04: Displays & Mobiliario -->
+<div class="theme-bg-container flex flex-col justify-between p-6 hover:theme-bg-elevated transition-colors duration-300 group theme-shadow border theme-border-subtle">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-signal-yellow font-bold">DISC // 04</span>
+<span class="theme-bg-charcoal theme-text-heading px-2 py-0.5 font-bold border theme-border-subtle">EQUIPAMIENTO</span>
+</div>
+<div class="h-44 w-full overflow-hidden theme-bg-charcoal mt-2 border theme-border-subtle">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Curated contemporary luxury exhibition furniture rental, minimalist reception counters, interactive touch totems, designer barstools and architectural vitrines in dark modern venue." src="assets/image-05.jpg">
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase theme-text-heading mt-2 group-hover:text-signal-yellow transition-colors font-bold">
+              DISPLAYS &amp; MOBILIARIO
+            </h3>
+<p class="font-body-sm text-body-sm theme-text-variant leading-relaxed">
+              Renta y venta de tótems interactivos, counters con cerrajería de seguridad, vitrinas de exhibición, luminarias beam y selección de mobiliario contemporáneo.
+            </p>
+</div>
+<div class="pt-6 mt-6 theme-bg-container-low -mx-6 -mb-6 p-6 flex flex-col gap-2 border-t theme-border-subtle">
+<div class="font-label-mono-sm text-label-mono-sm theme-text-surface flex justify-between">
+<span class="">CATÁLOGO:</span><span class="text-signal-yellow font-bold">+120 Ítems Activos</span>
+</div>
+<div class="font-label-mono-sm text-label-mono-sm theme-text-surface flex justify-between">
+<span class="">LOGÍSTICA:</span><span class="font-bold">Entrega en piso y retiro</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       PORTAFOLIO SELECTO (GALERÍA MODULAR CON FILTROS INTERACTIVOS)
+       ========================================================================= -->
+<section class="w-full theme-bg-lowest px-4 sm:px-8 lg:px-12 py-20 lg:py-28 border-y theme-border-subtle" id="portafolio-selecto">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<!-- Top Title + Interactive Category Tabs -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-4 border-b theme-border-subtle">
+<div>
+<span class="font-label-mono-sm text-label-mono-sm text-signal-yellow uppercase tracking-widest block font-bold">CASOS DE ÉXITO REALIZADOS</span>
+<h2 class="font-display-lg text-display-lg uppercase theme-text-heading font-bold mt-2">
+            PORTAFOLIO DE MONTAJES
+          </h2>
+</div>
+<!-- Filter Buttons with Interactive JS Switching -->
+<div class="flex flex-wrap gap-2 font-label-mono-sm text-label-mono-sm" id="portfolioFilterGroup">
+<button class="filter-btn active bg-signal-yellow text-surface-charcoal font-bold px-4 py-2 uppercase transition-colors shadow-sm" data-filter="all" type="button">
+            [TODOS]
+          </button>
+<button class="filter-btn theme-bg-container theme-text-variant hover:theme-text-heading hover:theme-bg-elevated font-bold px-4 py-2 uppercase transition-colors border theme-border-subtle" data-filter="custom" type="button">
+            STAND CUSTOM
+          </button>
+<button class="filter-btn theme-bg-container theme-text-variant hover:theme-text-heading hover:theme-bg-elevated font-bold px-4 py-2 uppercase transition-colors border theme-border-subtle" data-filter="octanorm" type="button">
+            STAND OCTANORM
+          </button>
+<button class="filter-btn theme-bg-container theme-text-variant hover:theme-text-heading hover:theme-bg-elevated font-bold px-4 py-2 uppercase transition-colors border theme-border-subtle" data-filter="esceno" type="button">
+            ESCENOGRAFÍAS
+          </button>
+</div>
+</div>
+<!-- Asymmetric Portfolio Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolioGrid">
+<!-- Proyecto 1: Custom Stand Isla -->
+<div class="portfolio-item custom theme-bg-charcoal flex flex-col group overflow-hidden theme-shadow border theme-border-subtle transition-all duration-300">
+<div class="relative h-72 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Massive 120 square meters island exhibition booth at Expo Mueble Internacional Guadalajara. Sophisticated dark wood textures, cantilevered branded ceiling, ambient warm spotlights, customer meeting zone." src="assets/image-06.jpg">
+<div class="absolute top-4 left-4 bg-surface-charcoal/90 text-signal-yellow font-label-mono-sm text-label-mono-sm px-3 py-1 font-bold border border-yellow-500/20">
+              120 M² // ISLA COMPLETA
+            </div>
+<div class="absolute bottom-4 left-4 bg-surface-container-lowest/90 px-2.5 py-1 font-label-mono-sm text-label-mono-sm text-raw-white">
+              EXPO MUEBLE INTERNACIONAL
+            </div>
+</div>
+<div class="p-6 flex flex-col gap-3">
+<div class="flex justify-between items-center font-label-mono-sm text-label-mono-sm theme-text-variant">
+<span class="">SISTEMA: CUSTOM CRAFT</span>
+<span class="text-signal-yellow font-bold">ZAPOPAN TALLER</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase theme-text-heading group-hover:text-signal-yellow transition-colors font-bold">
+              Pabellón Mobiliario de Alta Gama
+            </h3>
+<p class="font-body-sm text-body-sm theme-text-variant">
+              Estructura autoportante de doble altura con carpintería laqueada mate, iluminación perimetral oculta y cabina privada para cierre de contratos mayoristas.
+            </p>
+</div>
+</div>
+<!-- Proyecto 2: Stand Tecnológico Custom -->
+<div class="portfolio-item custom theme-bg-charcoal flex flex-col group overflow-hidden theme-shadow border theme-border-subtle transition-all duration-300">
+<div class="relative h-72 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Futuristic 72 square meters technology booth at FIHE exhibition in Mexico. Black graphite surfaces, razor-sharp yellow lighting accents, interactive LED totem pillars, presentation stage." src="assets/image-07.jpg">
+<div class="absolute top-4 left-4 bg-surface-charcoal/90 text-signal-yellow font-label-mono-sm text-label-mono-sm px-3 py-1 font-bold border border-yellow-500/20">
+              72 M² // CABECERA
+            </div>
+<div class="absolute bottom-4 left-4 bg-surface-container-lowest/90 px-2.5 py-1 font-label-mono-sm text-label-mono-sm text-raw-white">
+              FIHE FERIA INDUSTRIAL
+            </div>
+</div>
+<div class="p-6 flex flex-col gap-3">
+<div class="flex justify-between items-center font-label-mono-sm text-label-mono-sm theme-text-variant">
+<span class="">SISTEMA: HÍBRIDO HERRERÍA</span>
+<span class="text-signal-yellow font-bold">WTC CDMX</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase theme-text-heading group-hover:text-signal-yellow transition-colors font-bold">
+              Stand Tecnológico Automatizado
+            </h3>
+<p class="font-body-sm text-body-sm theme-text-variant">
+              Torres monolíticas con pantallas de paso pixel fino, tarima técnica registrable para cableado de datos y counter de demostración robótica.
+            </p>
+</div>
+</div>
+<!-- Proyecto 3: Stand Octanorm Premium -->
+<div class="portfolio-item octanorm theme-bg-charcoal flex flex-col group overflow-hidden theme-shadow border theme-border-subtle transition-all duration-300">
+<div class="relative h-72 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="High precision Octanorm modular booth 36 square meters at Expo Guadalajara. Tensioned graphic fabric walls with sharp typography, overhead cantilever lighting bars, branded information counter." src="assets/image-08.jpg">
+<div class="absolute top-4 left-4 bg-surface-charcoal/90 text-raw-white font-label-mono-sm text-label-mono-sm px-3 py-1 font-bold">
+              36 M² // ESQUINA
+            </div>
+<div class="absolute bottom-4 left-4 bg-surface-container-lowest/90 px-2.5 py-1 font-label-mono-sm text-label-mono-sm text-raw-white">
+              EXPO CAFÉ &amp; GOURMET
+            </div>
+</div>
+<div class="p-6 flex flex-col gap-3">
+<div class="flex justify-between items-center font-label-mono-sm text-label-mono-sm theme-text-variant">
+<span class="">SISTEMA: OCTANORM &amp; SEG</span>
+<span class="text-signal-yellow font-bold">EXPO GUADALAJARA</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase theme-text-heading group-hover:text-signal-yellow transition-colors font-bold">
+              Pabellón Gourmet Modulado
+            </h3>
+<p class="font-body-sm text-body-sm theme-text-variant">
+              Sistema modular de aluminio anodizado negro mate con gráficos en tela silicón sin arrugas, barra de degustación y bodega de resguardo con cerradura.
+            </p>
+</div>
+</div>
+<!-- Proyecto 4: Escenografía Monumental -->
+<div class="portfolio-item esceno theme-bg-charcoal flex flex-col group overflow-hidden theme-shadow border theme-border-subtle transition-all duration-300">
+<div class="relative h-72 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Monumental congress stage and plenary set design for a medical national convention. Giant stage proscenium with dynamic curved acoustic panels, illuminated podium, deep blue and amber lighting." src="assets/image-09.jpg">
+<div class="absolute top-4 left-4 bg-surface-charcoal/90 text-signal-yellow font-label-mono-sm text-label-mono-sm px-3 py-1 font-bold border border-yellow-500/20">
+              180 M² // ESCENOGRAFÍA
+            </div>
+<div class="absolute bottom-4 left-4 bg-surface-container-lowest/90 px-2.5 py-1 font-label-mono-sm text-label-mono-sm text-raw-white">
+              CONGRESO NACIONAL MÉDICO
+            </div>
+</div>
+<div class="p-6 flex flex-col gap-3">
+<div class="flex justify-between items-center font-label-mono-sm text-label-mono-sm theme-text-variant">
+<span class="">SISTEMA: PROSCENIO ESCÉNICO</span>
+<span class="text-signal-yellow font-bold">CENTRO CITIBANAMEX</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase theme-text-heading group-hover:text-signal-yellow transition-colors font-bold">
+              Plenario Farmacéutico de Alta Escala
+            </h3>
+<p class="font-body-sm text-body-sm theme-text-variant">
+              Volumetría tridimensional con bastidores ignífugos, pantalla central continua de 18 metros y pasarela de oradores con iluminación teatral robotizada.
+            </p>
+</div>
+</div>
+<!-- Proyecto 5: Stand Octanorm Maxima -->
+<div class="portfolio-item octanorm theme-bg-charcoal flex flex-col group overflow-hidden theme-shadow border theme-border-subtle transition-all duration-300">
+<div class="relative h-72 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Maxima system modular trade booth at Cintermex Monterrey with clean metallic beams, hanging overhead cube signage banner, product display shelves and consultation desk." src="assets/image-10.jpg">
+<div class="absolute top-4 left-4 bg-surface-charcoal/90 text-raw-white font-label-mono-sm text-label-mono-sm px-3 py-1 font-bold">
+              54 M² // PENÍNSULA
+            </div>
+<div class="absolute bottom-4 left-4 bg-surface-container-lowest/90 px-2.5 py-1 font-label-mono-sm text-label-mono-sm text-raw-white">
+              EXPO MANUFACTURA
+            </div>
+</div>
+<div class="p-6 flex flex-col gap-3">
+<div class="flex justify-between items-center font-label-mono-sm text-label-mono-sm theme-text-variant">
+<span class="">SISTEMA: MAXIMA 80MM</span>
+<span class="text-signal-yellow font-bold">CINTERMEX MTY</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase theme-text-heading group-hover:text-signal-yellow transition-colors font-bold">
+              Stand Industrial Prefabricado
+            </h3>
+<p class="font-body-sm text-body-sm theme-text-variant">
+              Perfiles reforzados Maxima con capacidad de carga para displays pesados, tarima de alto tránsito antiderrapante y gráficos de gran impacto visual.
+            </p>
+</div>
+</div>
+<!-- Proyecto 6: Stand Custom Inmersivo -->
+<div class="portfolio-item custom theme-bg-charcoal flex flex-col group overflow-hidden theme-shadow border theme-border-subtle transition-all duration-300">
+<div class="relative h-72 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Immersive architectural booth space featuring dark textured walls, integrated sensory light tunnels, modern luxury woodcraft and corporate VIP bar area." src="assets/image-11.jpg">
+<div class="absolute top-4 left-4 bg-signal-yellow text-surface-charcoal font-label-mono-sm text-label-mono-sm px-3 py-1 font-bold">
+              90 M² // ISLA MULTINIVEL
+            </div>
+<div class="absolute bottom-4 left-4 bg-surface-container-lowest/90 px-2.5 py-1 font-label-mono-sm text-label-mono-sm text-raw-white">
+              FERIA INTERNACIONAL DEL LIBRO
+            </div>
+</div>
+<div class="p-6 flex flex-col gap-3">
+<div class="flex justify-between items-center font-label-mono-sm text-label-mono-sm theme-text-variant">
+<span class="">SISTEMA: CARPINTERÍA DE AUTOR</span>
+<span class="text-signal-yellow font-bold">EXPO GDL</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase theme-text-heading group-hover:text-signal-yellow transition-colors font-bold">
+              Pabellón Cultural Sensorial
+            </h3>
+<p class="font-body-sm text-body-sm theme-text-variant">
+              Túneles de lectura inmersivos con acabados en chapa de roble, plafón acústico suspendido y área de firma de ejemplares con iluminación cálida puntual.
+            </p>
+</div>
+</div>
+</div>
+<!-- Action Footer for Portfolio -->
+<div class="theme-bg-container p-6 flex flex-col sm:flex-row items-center justify-between gap-4 border theme-border-subtle">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-signal-yellow text-[24px]">folder_special</span>
+<span class="font-body-md text-body-md theme-text-heading font-medium">¿Requieres un formato especial o asesoría en reglamentos de recinto?</span>
+</div>
+<a class="inline-flex items-center bg-signal-yellow hover:bg-raw-white text-surface-charcoal font-label-mono-sm text-label-mono-sm px-6 py-3 font-bold uppercase transition-colors shadow-sm" href="#estimador-espacio">
+          SOLICITAR CARPETA DE PROYECTO →
+        </a>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       METODOLOGÍA KUBICO ("DE LA COTA AL DESMONTAJE")
+       ========================================================================= -->
+<section class="w-full theme-bg-main px-4 sm:px-8 lg:px-12 py-20 lg:py-28" id="metodologia-cota">
+<div class="max-w-7xl mx-auto flex flex-col gap-16">
+<div>
+<span class="font-label-mono-sm text-label-mono-sm text-signal-yellow uppercase tracking-widest block font-bold">PROTOCOLO DE EJECUCIÓN</span>
+<h2 class="font-display-lg text-display-lg uppercase theme-text-heading font-bold mt-2">
+          DE LA COTA AL DESMONTAJE: LA RUTA TÉCNICA
+        </h2>
+<p class="font-body-md text-body-md theme-text-variant max-w-2xl mt-4">
+          Un proceso riguroso desarrollado durante más de trece años para eliminar la incertidumbre en piso de exhibición y garantizar entregas anticipadas.
+        </p>
+</div>
+<!-- Sequential Architectural Steps -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+<!-- Step 1 -->
+<div class="theme-bg-container p-6 flex flex-col justify-between gap-6 theme-shadow border theme-border-subtle">
+<div class="flex flex-col gap-4">
+<span class="font-mono-metric text-mono-metric text-signal-yellow">01</span>
+<h3 class="font-headline-sm text-headline-sm uppercase theme-text-heading font-bold">
+              DIAGNÓSTICO &amp; COTA
+            </h3>
+<p class="font-body-sm text-body-sm theme-text-variant">
+              Análisis del plano de pabellón, orientación cardinal del flujo peatonal en la expo, accesos a acometida eléctrica y límites de altura por reglamento.
+            </p>
+</div>
+<div class="font-label-mono-sm text-label-mono-sm text-signal-yellow theme-bg-container-low px-3 py-1 font-bold border theme-border-subtle">
+            FASE // PRE-PRODUCCIÓN
+          </div>
+</div>
+<!-- Step 2 -->
+<div class="theme-bg-container p-6 flex flex-col justify-between gap-6 theme-shadow border theme-border-subtle">
+<div class="flex flex-col gap-4">
+<span class="font-mono-metric text-mono-metric text-signal-yellow">02</span>
+<h3 class="font-headline-sm text-headline-sm uppercase theme-text-heading font-bold">
+              RENDER 3D &amp; ESTRUCTURA
+            </h3>
+<p class="font-body-sm text-body-sm theme-text-variant">
+              Modelado tridimensional hiperrealista con despiece constructivo exacto, cálculo de cargas, estudio lumínico y selección de texturas para aprobación final.
+            </p>
+</div>
+<div class="font-label-mono-sm text-label-mono-sm theme-text-heading theme-bg-container-low px-3 py-1 font-bold border theme-border-subtle">
+            FASE // INGENIERÍA 3D
+          </div>
+</div>
+<!-- Step 3 -->
+<div class="theme-bg-container p-6 flex flex-col justify-between gap-6 theme-shadow border theme-border-subtle">
+<div class="flex flex-col gap-4">
+<span class="font-mono-metric text-mono-metric text-signal-yellow">03</span>
+<h3 class="font-headline-sm text-headline-sm uppercase theme-text-heading font-bold">
+              TALLER PROPIO ZAPOPAN
+            </h3>
+<p class="font-body-sm text-body-sm theme-text-variant">
+              Fabricación en nuestras naves de carpintería, cerrajería y herrería. Armado previo de módulos para validar ensambles milimétricos antes de salir a carretera.
+            </p>
+</div>
+<div class="font-label-mono-sm text-label-mono-sm text-signal-yellow theme-bg-container-low px-3 py-1 font-bold border theme-border-subtle">
+            FASE // PRODUCCIÓN FÍSICA
+          </div>
+</div>
+<!-- Step 4 -->
+<div class="theme-bg-container p-6 flex flex-col justify-between gap-6 theme-shadow border theme-border-subtle">
+<div class="flex flex-col gap-4">
+<span class="font-mono-metric text-mono-metric text-signal-yellow">04</span>
+<h3 class="font-headline-sm text-headline-sm uppercase theme-text-heading font-bold">
+              MONTAJE T-24H
+            </h3>
+<p class="font-body-sm text-body-sm theme-text-variant">
+              Ingreso puntual en horario de montaje del recinto. Cuadrillas especializadas con entrega del stand terminado 24 horas antes del corte de listón oficial.
+            </p>
+</div>
+<div class="font-label-mono-sm text-label-mono-sm theme-text-heading theme-bg-container-low px-3 py-1 font-bold border theme-border-subtle">
+            FASE // PISO DE EXPO
+          </div>
+</div>
+<!-- Step 5 -->
+<div class="theme-bg-container p-6 flex flex-col justify-between gap-6 theme-shadow border theme-border-subtle">
+<div class="flex flex-col gap-4">
+<span class="font-mono-metric text-mono-metric text-signal-yellow">05</span>
+<h3 class="font-headline-sm text-headline-sm uppercase theme-text-heading font-bold">
+              SOPORTE &amp; DESMONTAJE
+            </h3>
+<p class="font-body-sm text-body-sm theme-text-variant">
+              Guardia técnica presencial durante el evento para imprevistos. Desmontaje exprés, embalaje seguro y entrega del espacio en ceros al comité ferial.
+            </p>
+</div>
+<div class="font-label-mono-sm text-label-mono-sm text-signal-yellow theme-bg-container-low px-3 py-1 font-bold border theme-border-subtle">
+            FASE // CIERRE &amp; RESGUARDO
+          </div>
+</div>
+</div>
+<!-- Detail Metric Graphic Box -->
+<div class="theme-bg-charcoal p-8 flex flex-col lg:flex-row items-center justify-between gap-8 theme-shadow border theme-border-subtle">
+<div class="flex flex-col gap-2">
+<div class="font-label-mono-sm text-label-mono-sm text-signal-yellow font-bold">CONTROL DE TIEMPO KUBICO</div>
+<h4 class="font-headline-md text-headline-md theme-text-heading uppercase font-bold">
+            CERO ESTRÉS EN DÍA DE INAUGURACIÓN
+          </h4>
+<p class="font-body-sm text-body-sm theme-text-variant max-w-xl">
+            Al tener manufactura propia en Zapopan eliminamos intermediarios. Tú llegas a colocar tus muestras con la iluminación ya calibrada y el piso aspirado.
+          </p>
+</div>
+<div class="flex items-center gap-6 shrink-0">
+<div class="text-right font-label-mono-sm text-label-mono-sm">
+<span class="theme-text-variant block">MARGEN DE CUMPLIMIENTO:</span>
+<span class="text-signal-yellow font-bold text-lg">100% AUDITADO</span>
+</div>
+<div class="h-12 w-12 bg-signal-yellow text-surface-charcoal flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[28px]">verified</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       CALENDARIO DE EXPOS & PRESENCIA ACTIVA
+       ========================================================================= -->
+<section class="w-full theme-bg-lowest px-4 sm:px-8 lg:px-12 py-20 lg:py-28 border-y theme-border-subtle" id="calendario-activo">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2">
+<div>
+<span class="font-label-mono-sm text-label-mono-sm text-signal-yellow uppercase tracking-widest block font-bold">LOGÍSTICA &amp; DESPLIEGUE EN VIVO</span>
+<h2 class="font-display-lg text-display-lg uppercase theme-text-heading font-bold mt-2">
+            CALENDARIO DE MONTAJES EN CURSO
+          </h2>
+</div>
+<div class="theme-bg-charcoal px-4 py-2 font-label-mono-sm text-label-mono-sm theme-text-heading flex items-center gap-2 self-start md:self-auto border theme-border-subtle">
+<span class="w-2 h-2 rounded-full bg-signal-yellow animate-pulse"></span>
+<span class="font-bold">CUADRILLAS CONFIRMADAS EN RECINTO</span>
+</div>
+</div>
+<!-- Agenda Table Widget -->
+<div class="theme-bg-container overflow-hidden theme-shadow border theme-border-subtle">
+<div class="hidden md:grid grid-cols-12 theme-bg-charcoal px-6 py-3 font-label-mono-sm text-label-mono-sm theme-text-variant uppercase tracking-wider border-b theme-border-subtle font-bold">
+<div class="col-span-3">RECINTO &amp; CIUDAD</div>
+<div class="col-span-4">EVENTO / CONGRESO</div>
+<div class="col-span-2">FECHA MONTAJE</div>
+<div class="col-span-2">ESTATUS CUADRILLA</div>
+<div class="col-span-1 text-right">ACCIÓN</div>
+</div>
+<!-- Row 1 -->
+<div class="grid grid-cols-1 md:grid-cols-12 p-6 items-center gap-4 theme-bg-container hover:theme-bg-elevated transition-colors border-b theme-border-subtle">
+<div class="md:col-span-3 flex items-center gap-3">
+<span class="text-signal-yellow font-bold font-label-mono-sm text-label-mono-sm">[EXPO GDL]</span>
+<span class="font-title-md text-title-md theme-text-heading font-bold">Expo Guadalajara</span>
+</div>
+<div class="md:col-span-4 font-body-md text-body-md theme-text-surface font-medium">
+            Expo Mueble Internacional Verano
+          </div>
+<div class="md:col-span-2 font-label-mono-sm text-label-mono-sm theme-text-variant">
+            AGOSTO 2024
+          </div>
+<div class="md:col-span-2">
+<span class="theme-accent-ochre text-signal-yellow px-2.5 py-1 font-label-mono-sm text-label-mono-sm font-bold uppercase inline-block border theme-border-subtle">
+              CUPO DISPONIBLE
+            </span>
+</div>
+<div class="md:col-span-1 text-left md:text-right">
+<a class="text-signal-yellow font-label-mono-sm text-label-mono-sm font-bold hover:underline" href="#estimador-espacio">APARTAR →</a>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-1 md:grid-cols-12 p-6 items-center gap-4 theme-bg-container-low hover:theme-bg-elevated transition-colors border-b theme-border-subtle">
+<div class="md:col-span-3 flex items-center gap-3">
+<span class="text-signal-yellow font-bold font-label-mono-sm text-label-mono-sm">[WTC CDMX]</span>
+<span class="font-title-md text-title-md theme-text-heading font-bold">WTC Ciudad de México</span>
+</div>
+<div class="md:col-span-4 font-body-md text-body-md theme-text-surface font-medium">
+            Expo Proveedores del Sector Salud
+          </div>
+<div class="md:col-span-2 font-label-mono-sm text-label-mono-sm theme-text-variant">
+            SEPTIEMBRE 2024
+          </div>
+<div class="md:col-span-2">
+<span class="bg-signal-yellow text-surface-charcoal px-2.5 py-1 font-label-mono-sm text-label-mono-sm font-bold uppercase inline-block">
+              ÚLTIMOS 2 STANDS
+            </span>
+</div>
+<div class="md:col-span-1 text-left md:text-right">
+<a class="text-signal-yellow font-label-mono-sm text-label-mono-sm font-bold hover:underline" href="#estimador-espacio">APARTAR →</a>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="grid grid-cols-1 md:grid-cols-12 p-6 items-center gap-4 theme-bg-container hover:theme-bg-elevated transition-colors border-b theme-border-subtle">
+<div class="md:col-span-3 flex items-center gap-3">
+<span class="text-signal-yellow font-bold font-label-mono-sm text-label-mono-sm">[CINTERMEX]</span>
+<span class="font-title-md text-title-md theme-text-heading font-bold">Cintermex Monterrey</span>
+</div>
+<div class="md:col-span-4 font-body-md text-body-md theme-text-surface font-medium">
+            Expo Manufactura &amp; Metalmecánica
+          </div>
+<div class="md:col-span-2 font-label-mono-sm text-label-mono-sm theme-text-variant">
+            OCTUBRE 2024
+          </div>
+<div class="md:col-span-2">
+<span class="theme-accent-ochre text-signal-yellow px-2.5 py-1 font-label-mono-sm text-label-mono-sm font-bold uppercase inline-block border theme-border-subtle">
+              CUPO DISPONIBLE
+            </span>
+</div>
+<div class="md:col-span-1 text-left md:text-right">
+<a class="text-signal-yellow font-label-mono-sm text-label-mono-sm font-bold hover:underline" href="#estimador-espacio">APARTAR →</a>
+</div>
+</div>
+<!-- Row 4 -->
+<div class="grid grid-cols-1 md:grid-cols-12 p-6 items-center gap-4 theme-bg-container-low hover:theme-bg-elevated transition-colors">
+<div class="md:col-span-3 flex items-center gap-3">
+<span class="text-signal-yellow font-bold font-label-mono-sm text-label-mono-sm">[EXPO GDL]</span>
+<span class="font-title-md text-title-md theme-text-heading font-bold">Expo Guadalajara</span>
+</div>
+<div class="md:col-span-4 font-body-md text-body-md theme-text-surface font-medium">
+            Feria Internacional del Libro (FIL)
+          </div>
+<div class="md:col-span-2 font-label-mono-sm text-label-mono-sm theme-text-variant">
+            NOVIEMBRE 2024
+          </div>
+<div class="md:col-span-2">
+<span class="theme-bg-container-high theme-text-heading px-2.5 py-1 font-label-mono-sm text-label-mono-sm font-bold uppercase inline-block border theme-border-subtle">
+              FASE DE DISEÑO
+            </span>
+</div>
+<div class="md:col-span-1 text-left md:text-right">
+<a class="text-signal-yellow font-label-mono-sm text-label-mono-sm font-bold hover:underline" href="#estimador-espacio">APARTAR →</a>
+</div>
+</div>
+</div>
+<div class="p-4 theme-bg-container-low flex flex-col sm:flex-row items-center justify-between font-label-mono-sm text-label-mono-sm theme-text-variant gap-4 border theme-border-subtle">
+<span class="">¿Tu expo no figura en la lista? Operamos montajes en cualquier centro de convenciones de la República.</span>
+<a class="theme-text-heading font-bold hover:text-signal-yellow transition-colors underline" href="mailto:hola@kubico.mx">CONSULTAR FECHA ESPECÍFICA</a>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       VALOR DIFERENCIAL & TESTIMONIOS (RESPALDO 13 AÑOS)
+       ========================================================================= -->
+<section class="w-full theme-bg-main px-4 sm:px-8 lg:px-12 py-20 lg:py-28">
+<div class="max-w-7xl mx-auto flex flex-col gap-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 flex flex-col gap-6">
+<span class="font-label-mono-sm text-label-mono-sm text-signal-yellow uppercase tracking-widest font-bold">¿POR QUÉ KUBICO?</span>
+<h2 class="font-display-lg text-display-lg uppercase theme-text-heading font-bold">
+            PRECIO JUSTO SIN SACRIFICAR EL ACABADO DE LUJO
+          </h2>
+<p class="font-body-lg text-body-lg theme-text-variant">
+            No sacrificamos calidad por precio: cumplimos lo que prometemos en cada metro cuadrado contratado.
+          </p>
+<div class="flex flex-col gap-4 pt-2">
+<div class="theme-bg-container p-4 flex gap-4 items-start border theme-border-subtle theme-shadow">
+<span class="material-symbols-outlined text-signal-yellow text-[24px]">verified</span>
+<div>
+<h3 class="font-title-lg text-title-lg theme-text-heading uppercase font-bold">Nuevas Tendencias &amp; Sensorialidad</h3>
+<p class="font-body-sm text-body-sm theme-text-variant mt-1">Interiorismo ferial de alto impacto que logra ambientes sofisticados, contemporáneos y acogedores para tus prospectos.</p>
+</div>
+</div>
+<div class="theme-bg-container p-4 flex gap-4 items-start border theme-border-subtle theme-shadow">
+<span class="material-symbols-outlined text-signal-yellow text-[24px]">handshake</span>
+<div>
+<h3 class="font-title-lg text-title-lg theme-text-heading uppercase font-bold">Satisfacción Garantizada</h3>
+<p class="font-body-sm text-body-sm theme-text-variant mt-1">Nuestro compromiso no termina en el plano; construimos un espacio que inspira a tu equipo comercial y enamora al comprador.</p>
+</div>
+</div>
+<div class="theme-bg-container p-4 flex gap-4 items-start border theme-border-subtle theme-shadow">
+<span class="material-symbols-outlined text-signal-yellow text-[24px]">precision_manufacturing</span>
+<div>
+<h3 class="font-title-lg text-title-lg theme-text-heading uppercase font-bold">Taller Integrado en Jalisco</h3>
+<p class="font-body-sm text-body-sm theme-text-variant mt-1">Maquinaria propia, barnizado libre de polvo y control directo de calidad sobre herrería y maderas finas.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Columna Testimonios Reales de Directores -->
+<div class="lg:col-span-6 flex flex-col gap-6">
+<div class="theme-bg-charcoal p-8 flex flex-col gap-6 theme-shadow relative border theme-border-subtle">
+<span class="material-symbols-outlined text-signal-yellow text-[40px] opacity-40">format_quote</span>
+<p class="font-body-lg text-body-lg theme-text-heading italic">
+              "Llevamos 4 ediciones consecutivas montando con Kubico en Expo Guadalajara. La tranquilidad de llegar el día previo y ver el stand 100% terminado, limpio y con las luces calibradas no tiene comparación en la industria."
+            </p>
+<div class="flex items-center justify-between pt-4 theme-bg-container-low -mx-8 -mb-8 p-6 border-t theme-border-subtle">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md theme-text-heading font-bold">Ing. Carlos Valenzuela</span>
+<span class="font-label-mono-sm text-label-mono-sm theme-text-variant">Director Comercial // Grupo Mueblero Occidente</span>
+</div>
+<span class="text-signal-yellow font-label-mono-sm text-label-mono-sm font-bold">[120 M² ISLAND]</span>
+</div>
+</div>
+<div class="theme-bg-charcoal p-8 flex flex-col gap-6 theme-shadow relative border theme-border-subtle">
+<span class="material-symbols-outlined text-signal-yellow text-[40px] opacity-40">format_quote</span>
+<p class="font-body-lg text-body-lg theme-text-heading italic">
+              "La capacidad de respuesta en sistemas Octanorm para nuestro congreso en WTC CDMX fue impecable. Resolvieron en menos de 48 horas cambios estructurales sin costos ocultos."
+            </p>
+<div class="flex items-center justify-between pt-4 theme-bg-container-low -mx-8 -mb-8 p-6 border-t theme-border-subtle">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md theme-text-heading font-bold">Lic. Mariana Arteaga</span>
+<span class="font-label-mono-sm text-label-mono-sm theme-text-variant">Gerente de Marca // Pharma Solutions México</span>
+</div>
+<span class="text-signal-yellow font-label-mono-sm text-label-mono-sm font-bold">[ESCENOGRAFÍA &amp; STANDS]</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       CALCULADORA RÁPIDA / ESTIMADOR DE STAND (INTERACTIVO)
+       ========================================================================= -->
+<section class="w-full theme-bg-lowest px-4 sm:px-8 lg:px-12 py-20 lg:py-28 border-y theme-border-subtle" id="estimador-espacio">
+<div class="max-w-5xl mx-auto flex flex-col gap-12">
+<div class="text-center flex flex-col items-center gap-3">
+<span class="theme-bg-charcoal text-signal-yellow px-3 py-1 font-label-mono-sm text-label-mono-sm font-bold uppercase tracking-widest border theme-border-subtle">
+          HERRAMIENTA DE PRE-DIMENSIONAMIENTO
+        </span>
+<h2 class="font-display-lg text-display-lg uppercase theme-text-heading font-bold">
+          ESTIMADOR ARQUITECTÓNICO DE STAND
+        </h2>
+<p class="font-body-md text-body-md theme-text-variant max-w-xl">
+          Selecciona las variables técnicas de tu espacio ferial y calcula al instante los parámetros preliminares de tu proyecto.
+        </p>
+</div>
+<!-- Estimator Interactive Form Module -->
+<div class="theme-bg-container p-6 sm:p-10 theme-shadow border theme-border-subtle flex flex-col gap-8">
+<!-- Step 1: Dimensions -->
+<div class="flex flex-col gap-3">
+<label class="font-label-mono-sm text-label-mono-sm uppercase text-signal-yellow font-bold">
+            01. SELECCIONA EL FORMATO DE TU ESPACIO:
+          </label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="formatSelector">
+<button class="format-btn p-4 theme-bg-charcoal hover:theme-bg-elevated text-left transition-colors flex flex-col gap-1 active theme-bg-elevated border theme-border-subtle" data-sqm="9" type="button">
+<span class="font-label-mono-lg text-label-mono-lg text-signal-yellow font-bold">3x3 m</span>
+<span class="font-label-mono-sm text-label-mono-sm theme-text-variant">9 M² // ESTÁNDAR</span>
+</button>
+<button class="format-btn p-4 theme-bg-charcoal hover:theme-bg-elevated text-left transition-colors flex flex-col gap-1 border theme-border-subtle" data-sqm="18" type="button">
+<span class="font-label-mono-lg text-label-mono-lg theme-text-heading font-bold">6x3 m</span>
+<span class="font-label-mono-sm text-label-mono-sm theme-text-variant">18 M² // CABECERA</span>
+</button>
+<button class="format-btn p-4 theme-bg-charcoal hover:theme-bg-elevated text-left transition-colors flex flex-col gap-1 border theme-border-subtle" data-sqm="36" type="button">
+<span class="font-label-mono-lg text-label-mono-lg theme-text-heading font-bold">6x6 m</span>
+<span class="font-label-mono-sm text-label-mono-sm theme-text-variant">36 M² // PENÍNSULA</span>
+</button>
+<button class="format-btn p-4 theme-bg-charcoal hover:theme-bg-elevated text-left transition-colors flex flex-col gap-1 border theme-border-subtle" data-sqm="100" type="button">
+<span class="font-label-mono-lg text-label-mono-lg theme-text-heading font-bold">10x10 m+</span>
+<span class="font-label-mono-sm text-label-mono-sm theme-text-variant">100+ M² // ISLA</span>
+</button>
+</div>
+</div>
+<!-- Step 2: System Type -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-mono-sm text-label-mono-sm uppercase text-signal-yellow font-bold">
+              02. SISTEMA CONSTRUCTIVO DESEADO:
+            </label>
+<select class="theme-bg-charcoal theme-text-heading p-3 font-label-mono-sm text-label-mono-sm focus:outline-none focus:ring-1 focus:ring-yellow-400 border theme-border-subtle" id="systemSelector">
+<option value="custom">STAND CUSTOM (Maderas, Herrería y Diseño 100% a la Medida)</option>
+<option value="octanorm">STAND MODULAR OCTANORM (Aluminio + Tela Sublimada)</option>
+<option value="hybrid">SISTEMA HÍBRIDO (Estructura Octanorm con Frentes Custom en Madera)</option>
+<option value="scenic">ESCENOGRAFÍA / EXPERIENCIA INMERSIVA</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-mono-sm text-label-mono-sm uppercase text-signal-yellow font-bold">
+              03. RECINTO FERIAL DESTINO:
+            </label>
+<select class="theme-bg-charcoal theme-text-heading p-3 font-label-mono-sm text-label-mono-sm focus:outline-none focus:ring-1 focus:ring-yellow-400 border theme-border-subtle" id="venueSelector">
+<option value="gdl">Expo Guadalajara (Zapopan / GDL)</option>
+<option value="wtc">WTC Ciudad de México (CDMX)</option>
+<option value="citibanamex">Centro Citibanamex (CDMX)</option>
+<option value="cintermex">Cintermex (Monterrey)</option>
+<option value="poliforum">Poliforum León (Guanajuato)</option>
+<option value="otro">Otro Recinto / Fuera del Área Metropolitana</option>
+</select>
+</div>
+</div>
+<!-- Live Estimate Summary Bar -->
+<div class="theme-bg-charcoal p-6 flex flex-col sm:flex-row items-center justify-between gap-6 border theme-border-subtle">
+<div class="flex flex-col gap-1 text-center sm:text-left">
+<span class="font-label-mono-sm text-label-mono-sm theme-text-variant uppercase font-bold">PARÁMETRO CALCULADO:</span>
+<div class="font-headline-sm text-headline-sm theme-text-heading font-bold">
+              Superficie: <span class="text-signal-yellow font-bold" id="displaySqm">9</span> m² 
+              <span class="theme-text-variant font-normal text-sm block sm:inline sm:ml-2">| Sistema: <span class="theme-text-heading font-bold" id="displaySystem">Custom Woodcraft</span></span>
+</div>
+</div>
+<div class="theme-bg-container px-4 py-2 text-center border theme-border-subtle">
+<span class="font-label-mono-sm text-label-mono-sm theme-text-variant block">TIEMPO ESTIMADO MONTAJE:</span>
+<span class="font-mono-metric text-mono-metric text-signal-yellow" id="displayTime">18h</span>
+</div>
+</div>
+<!-- User Contact Direct Input Cluster -->
+<p class="theme-text-variant" style="margin-bottom:16px;font-size:14px">Formulario de demostración: no envía ni guarda datos. Los tiempos del estimador son ilustrativos y están pendientes de validación por Kubico.</p><form class="grid grid-cols-1 md:grid-cols-3 gap-4" id="proposalForm">
+<div>
+<label class="font-label-mono-sm text-label-mono-sm uppercase theme-text-variant block mb-1 font-bold">EMPRESA / MARCA:</label>
+<input class="w-full theme-bg-charcoal p-3 font-body-sm text-body-sm theme-text-heading border theme-border-subtle focus:outline-none focus:ring-1 focus:ring-yellow-400" placeholder="Ej. Mobiliaria MX" required="" type="text">
+</div>
+<div>
+<label class="font-label-mono-sm text-label-mono-sm uppercase theme-text-variant block mb-1 font-bold">CORREO CORPORATIVO:</label>
+<input class="w-full theme-bg-charcoal p-3 font-body-sm text-body-sm theme-text-heading border theme-border-subtle focus:outline-none focus:ring-1 focus:ring-yellow-400" placeholder="director@empresa.com" required="" type="email">
+</div>
+<div>
+<label class="font-label-mono-sm text-label-mono-sm uppercase theme-text-variant block mb-1 font-bold">WHATSAPP / TELÉFONO:</label>
+<input class="w-full theme-bg-charcoal p-3 font-body-sm text-body-sm theme-text-heading border theme-border-subtle focus:outline-none focus:ring-1 focus:ring-yellow-400" placeholder="(33) 0000 0000" required="" type="tel">
+</div>
+<div class="md:col-span-3 pt-2">
+<button class="w-full bg-signal-yellow hover:bg-raw-white text-surface-charcoal font-label-mono-lg text-label-mono-lg uppercase font-bold py-4 transition-colors flex items-center justify-center gap-2 group shadow-md" type="submit">
+<span class="">SOLICITAR PROPUESTA CONCEPTUAL Y RENDER 3D SIN COSTO</span>
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">send</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       DETALLES DE CONTACTO VERÍDICOS & TALLER CENTRAL
+       ========================================================================= -->
+<section class="w-full theme-bg-main px-4 sm:px-8 lg:px-12 py-20 lg:py-28" id="contacto-taller">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Data Info Column -->
+<div class="lg:col-span-6 flex flex-col gap-6">
+<span class="font-label-mono-sm text-label-mono-sm text-signal-yellow uppercase tracking-widest font-bold">PRESENCIA Y CENTRAL DE OPERACIONES</span>
+<h2 class="font-display-lg text-display-lg uppercase theme-text-heading font-bold">
+            CONTÁCTANOS DIRECTAMENTE
+          </h2>
+<p class="font-body-md text-body-md theme-text-variant">
+            Nuestra matriz y taller integral de producción se localiza en Zapopan, Jalisco, con despacho ágil hacia cualquier recinto del país.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+<div class="theme-bg-container p-6 flex flex-col gap-2 border theme-border-subtle theme-shadow">
+<span class="font-label-mono-sm text-label-mono-sm text-signal-yellow uppercase font-bold">INTERIOR DE LA REPÚBLICA:</span>
+<a class="font-title-lg text-title-lg theme-text-heading hover:text-signal-yellow transition-colors font-bold" href="tel:+523312040801">(33) 1204 0801</a>
+<a class="font-title-lg text-title-lg theme-text-heading hover:text-signal-yellow transition-colors font-bold" href="tel:+523312040802">(33) 1204 0802</a>
+<span class="font-label-mono-sm text-label-mono-sm theme-text-variant mt-2">Lunes a Sábado 8:00 - 19:00 hrs</span>
+</div>
+<div class="theme-bg-container p-6 flex flex-col gap-2 border theme-border-subtle theme-shadow">
+<span class="font-label-mono-sm text-label-mono-sm text-signal-yellow uppercase font-bold">CORREO CENTRAL:</span>
+<a class="font-title-lg text-title-lg theme-text-heading hover:text-signal-yellow transition-colors font-bold" href="mailto:hola@kubico.mx">hola@kubico.mx</a>
+<a class="font-title-lg text-title-lg theme-text-heading hover:text-signal-yellow transition-colors font-bold" href="mailto:ventas@kubico.mx">ventas@kubico.mx</a>
+<span class="font-label-mono-sm text-label-mono-sm theme-text-variant mt-2">Atención a Licitaciones y Proyectos</span>
+</div>
+</div>
+<div class="theme-bg-container p-6 flex flex-col gap-2 border theme-border-subtle theme-shadow">
+<span class="font-label-mono-sm text-label-mono-sm text-signal-yellow uppercase font-bold">DIRECCIÓN DE PLANTA:</span>
+<div class="font-body-lg text-body-lg theme-text-heading font-medium">
+              Juán Antonio Torres #3358, Col. Loma Bonita, C.P. 45085, Zapopan, Jalisco, México.
+            </div>
+<span class="font-label-mono-sm text-label-mono-sm theme-text-variant mt-1">Cercanía estratégica con Expo Guadalajara (10 minutos)</span>
+</div>
+</div>
+<!-- Google Maps Integration Column -->
+<div class="lg:col-span-6 flex flex-col gap-4">
+<div class="font-label-mono-sm text-label-mono-sm theme-text-variant flex items-center justify-between">
+<span class="">COORDENADAS DE TALLER: 20.6279° N, 103.4144° W</span>
+<span class="text-signal-yellow font-bold">ZAPOPAN // JALISCO</span>
+</div>
+<!-- Google Maps static container with data-location -->
+<div class="w-full h-96 theme-bg-charcoal overflow-hidden theme-shadow relative border theme-border-subtle" data-location="Juan Antonio Torres 3358, Loma Bonita, Zapopan, Jalisco, Mexico" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFJgbSbtt0lJ58nkaNZ63JesYYY5Q4bDIUM0E6OG42hJ_JlIoqHxSM2GkxIPBSl5KTxyYVGf5jRuEJabl7SPQjnSuhmXSTgK8JXeCKvccj2eIAdy77c3aAYWZwFFpEzZ7j_bOXty-tdqpOdvnQBMrErOmKq_9AzewC9Rtu4e8gYz821wLfVxh825opEtAg9vRGQ6WkWMtnEH57BJ_mAdo-VY_oCb_wcrGSe9-_rccLXEFL7JVmiC5w1w'); background-size: cover; background-position: center;">
+<div class="absolute bottom-4 left-4 theme-bg-charcoal/95 p-3 theme-text-heading font-label-mono-sm text-label-mono-sm shadow-md border theme-border-subtle">
+<span class="text-signal-yellow font-bold block">PLANTA DE FABRICACIÓN KUBICO</span>
+<span class="">Zapopan, Jalisco. Conexión directa a corredor logístico ferial.</span>
+</div>
+</div>
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm theme-text-variant">
+<span class="">Visitas a taller con cita previa para revisión de maquetas y maderas.</span>
+<a class="text-signal-yellow font-bold hover:underline flex items-center gap-1" href="https://maps.google.com" target="_blank">ABRIR RUTA GPS ↗</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // SMART DUAL-MODE LOGIC & AUTO DETECTION
+  (function() {
+    const html = document.getElementById('htmlRoot');
+    const btnAuto = document.getElementById('btnThemeAuto');
+    const btnLight = document.getElementById('btnThemeLight');
+    const btnDark = document.getElementById('btnThemeDark');
+    const themeButtons = [btnAuto, btnLight, btnDark];
+
+    // Determine day vs night based on system media or local clock (7:00 to 19:00 = Day)
+    function getSystemOrClockTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+      }
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        return 'light';
+      }
+      const hour = new Date().getHours();
+      return (hour >= 7 && hour < 19) ? 'light' : 'dark';
+    }
+
+    let currentMode = localStorage.getItem('kubico_theme_mode') || 'auto';
+
+    function applyTheme(mode) {
+      currentMode = mode;
+      localStorage.setItem('kubico_theme_mode', mode);
+
+      let effectiveTheme = mode;
+      if (mode === 'auto') {
+        effectiveTheme = getSystemOrClockTheme();
+      }
+
+      if (effectiveTheme === 'light') {
+        html.classList.remove('dark');
+        html.classList.add('light');
+      } else {
+        html.classList.remove('light');
+        html.classList.add('dark');
+      }
+
+      // Update switcher active styling
+      themeButtons.forEach(btn => {
+        if (!btn) return;
+        const btnMode = btn.getAttribute('data-theme-mode');
+        if (btnMode === mode) {
+          btn.classList.add('bg-signal-yellow', 'text-surface-charcoal', 'shadow-sm');
+          btn.classList.remove('theme-text-variant', 'hover:theme-text-heading');
+        } else {
+          btn.classList.remove('bg-signal-yellow', 'text-surface-charcoal', 'shadow-sm');
+          btn.classList.add('theme-text-variant', 'hover:theme-text-heading');
+        }
+      });
+    }
+
+    // Attach listeners
+    if (btnAuto) btnAuto.addEventListener('click', () => applyTheme('auto'));
+    if (btnLight) btnLight.addEventListener('click', () => applyTheme('light'));
+    if (btnDark) btnDark.addEventListener('click', () => applyTheme('dark'));
+
+    // Listen to OS theme changes if on auto
+    if (window.matchMedia) {
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        if (currentMode === 'auto') applyTheme('auto');
+      });
+    }
+
+    // Initialize theme on load
+    applyTheme(currentMode);
+
+    // Portfolio interactive filter logic
+    const filterButtons = document.querySelectorAll('#portfolioFilterGroup .filter-btn');
+    const items = document.querySelectorAll('#portfolioGrid .portfolio-item');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-signal-yellow', 'text-surface-charcoal');
+          b.classList.add('theme-bg-container', 'theme-text-variant');
+        });
+        btn.classList.add('bg-signal-yellow', 'text-surface-charcoal');
+        btn.classList.remove('theme-bg-container', 'theme-text-variant');
+
+        const filter = btn.getAttribute('data-filter');
+
+        items.forEach(item => {
+          if (filter === 'all' || item.classList.contains(filter)) {
+            item.style.display = 'flex';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Estimator format selector logic
+    const formatButtons = document.querySelectorAll('#formatSelector .format-btn');
+    const displaySqm = document.getElementById('displaySqm');
+    const displaySystem = document.getElementById('displaySystem');
+    const displayTime = document.getElementById('displayTime');
+    const systemSelector = document.getElementById('systemSelector');
+
+    function updateEstimator() {
+      const activeFormat = document.querySelector('#formatSelector .format-btn.active');
+      const sqm = activeFormat ? activeFormat.getAttribute('data-sqm') : '9';
+      if (displaySqm) displaySqm.textContent = sqm;
+
+      if (!systemSelector) return;
+      const sysVal = systemSelector.value;
+      if (sysVal === 'custom') {
+        if (displaySystem) displaySystem.textContent = 'Custom Woodcraft';
+        if (displayTime) displayTime.textContent = (parseInt(sqm) > 50 ? '36h' : '24h');
+      } else if (sysVal === 'octanorm') {
+        if (displaySystem) displaySystem.textContent = 'Modular Octanorm';
+        if (displayTime) displayTime.textContent = '12h';
+      } else if (sysVal === 'hybrid') {
+        if (displaySystem) displaySystem.textContent = 'Híbrido Madera/Aluminio';
+        if (displayTime) displayTime.textContent = '18h';
+      } else {
+        if (displaySystem) displaySystem.textContent = 'Escenográfico';
+        if (displayTime) displayTime.textContent = '30h';
+      }
+    }
+
+    formatButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        formatButtons.forEach(b => {
+          b.classList.remove('active', 'theme-bg-elevated');
+          const title = b.querySelector('.font-label-mono-lg');
+          if (title) {
+            title.classList.remove('text-signal-yellow');
+            title.classList.add('theme-text-heading');
+          }
+        });
+        btn.classList.add('active', 'theme-bg-elevated');
+        const activeTitle = btn.querySelector('.font-label-mono-lg');
+        if (activeTitle) {
+          activeTitle.classList.remove('theme-text-heading');
+          activeTitle.classList.add('text-signal-yellow');
+        }
+        updateEstimator();
+      });
+    });
+
+    updateEstimator();
+    if (systemSelector) {
+      systemSelector.addEventListener('change', updateEstimator);
+    }
+  })();
+</script></main><footer class="w-full theme-bg-charcoal mt-space-2xl theme-text-surface border-t theme-border-subtle"><div class="w-full px-4 sm:px-8 lg:px-12 py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12"><div class="lg:col-span-4 flex flex-col justify-between space-y-6"><div class="space-y-4"><div class="flex items-center gap-3"><img alt="Kubico Arquitectura Temporal" class="h-7 w-auto object-contain" src="assets/image-00.png"><span class="font-headline-sm text-headline-sm uppercase theme-text-heading tracking-tight font-bold">KUBICO</span></div><p class="font-body-md text-body-md theme-text-variant max-w-sm">Ingeniería de arquitectura efímera, stands modulares premium y escenografías monumentales de alto impacto para ferias y congresos en todo México.</p></div><div class="space-y-2 font-label-mono-sm text-label-mono-sm theme-text-variant"><div class="">REF // REG_EXP: <span class="theme-text-heading font-bold">JAL-72901-EST</span></div><div class="">PROYECTO // <span class="text-signal-yellow font-bold">OCTANORM / CUSTOM / SISTEMAS HYBRID</span></div><div class="">CENTRAL: <span class="theme-text-heading font-bold">ZAPOPAN, JALISCO, MÉXICO</span></div></div></div><div class="lg:col-span-3 space-y-4"><h4 class="font-label-mono-lg text-label-mono-lg uppercase tracking-wider theme-text-heading flex items-center gap-2 font-bold"><span class="w-1.5 h-1.5 bg-signal-yellow"></span>UBICACIÓN &amp; CONTACTO</h4><div class="space-y-3 font-body-sm text-body-sm theme-text-variant"><div><span class="font-label-mono-sm text-label-mono-sm uppercase text-signal-yellow block font-bold">MATRIZ Y TALLER:</span><span class="">Zapopan, Jalisco, México. Cobertura en Expo Guadalajara, WTC CDMX, Centro Citibanamex y Cintermex Monterrey.</span></div><div><span class="font-label-mono-sm text-label-mono-sm uppercase text-signal-yellow block font-bold">CORREO DIRECTO:</span><a class="theme-text-heading hover:text-signal-yellow transition-colors font-label-mono-sm text-label-mono-sm font-bold" href="mailto:hola@kubico.mx">hola@kubico.mx</a></div><div><span class="font-label-mono-sm text-label-mono-sm uppercase text-signal-yellow block font-bold">ATENCIÓN &amp; PROYECTOS:</span><span class="font-label-mono-sm text-label-mono-sm theme-text-heading font-bold">+52 (33) 3600-KUBI / +52 (33) 3812-9900</span></div></div></div><div class="lg:col-span-3 space-y-4"><h4 class="font-label-mono-lg text-label-mono-lg uppercase tracking-wider theme-text-heading flex items-center gap-2 font-bold"><span class="w-1.5 h-1.5 bg-signal-yellow"></span>DISCIPLINAS TÉCNICAS</h4><ul class="space-y-2 font-label-mono-sm text-label-mono-sm theme-text-variant"><li class=""><a class="hover:text-signal-yellow transition-colors block" data-path="servicios" href="#servicios-especializados">[01] STANDS CUSTOM (MADERA Y HERRERÍA)</a></li><li class=""><a class="hover:text-signal-yellow transition-colors block" data-path="servicios" href="#servicios-especializados">[02] ARQUITECTURA MODULAR OCTANORM &amp; MAXIMA</a></li><li class=""><a class="hover:text-signal-yellow transition-colors block" data-path="servicios" href="#servicios-especializados">[03] ESCENOGRAFÍAS Y PABELLONES DE GOBIERNO</a></li><li class=""><a class="hover:text-signal-yellow transition-colors block" data-path="servicios" href="#servicios-especializados">[04] INGENIERÍA AUDIOVISUAL &amp; ILUMINACIÓN LED</a></li><li class=""><a class="hover:text-signal-yellow transition-colors block" data-path="metodologia-espacio" href="#metodologia-cota">[05] MONTAJE EXPRÉS CERTIFICADO 24/7</a></li></ul></div><div class="lg:col-span-2 space-y-4"><h4 class="font-label-mono-lg text-label-mono-lg uppercase tracking-wider theme-text-heading flex items-center gap-2 font-bold"><span class="w-1.5 h-1.5 bg-signal-yellow"></span>ESTATUS LOGÍSTICO</h4><div class="theme-bg-elevated p-4 space-y-3 font-label-mono-sm text-label-mono-sm border theme-border-subtle"><div class="flex justify-between items-center"><span class="theme-text-variant">DISPONIBILIDAD:</span><span class="text-signal-yellow font-bold">Q3/Q4 2024</span></div><div class="flex justify-between items-center"><span class="theme-text-variant">TALLER ACTIVO:</span><span class="theme-text-heading font-bold">1,850 M²</span></div><div class="flex justify-between items-center"><span class="theme-text-variant">NORMAS EXPO:</span><span class="theme-text-heading font-bold">NOM-001 / NFPA</span></div><div class="pt-2"><a class="text-signal-yellow hover:theme-text-heading transition-colors flex items-center gap-1 font-bold" data-path="calendario-expos" href="#calendario-activo">VER CALENDARIO →</a></div></div></div></div><div class="mt-space-xl pt-6 flex flex-col md:flex-row items-center justify-between gap-4 font-label-mono-sm text-label-mono-sm theme-text-variant border-t theme-border-subtle"><div class="flex items-center gap-2"><span class="">© 2026 KUBICO ARQUITECTURA TEMPORAL S.A. DE C.V.</span><span class="hidden sm:inline">//</span><span class="hidden sm:inline">ZAPOPAN, JALISCO</span></div><div class="flex items-center gap-6"><a class="hover:text-signal-yellow transition-colors" href="#">TÉRMINOS E INGENIERÍA</a><a class="hover:text-signal-yellow transition-colors" href="#">AVISO DE PRIVACIDAD</a><span class="text-signal-yellow font-bold">v4.9_DUAL_SYSTEM</span></div></div></div></footer>
+
+<script src="preview.js"></script></body></html>
